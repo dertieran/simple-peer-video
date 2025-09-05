@@ -14,11 +14,16 @@
 	},
 	"dependencies": {
 		"@kobalte/core": "^0.13.11",
+		"@solid-primitives/clipboard": "^1.6.2",
+		"@solid-primitives/stream": "^0.7.2",
 		"@unocss/reset": "^66.5.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
+		"nanoid": "^5.1.5",
 		"solid-js": "^1.9.9",
-		"tailwind-merge": "^3.3.1"
+		"tailwind-merge": "^3.3.1",
+		"trystero": "^0.21.8",
+		"uqr": "^0.1.2"
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^5.2.2",
@@ -34,6 +39,10 @@
 		"vite-plugin-solid": "^2.11.8"
 	},
 	"pnpm": {
-		"onlyBuiltDependencies": ["esbuild"]
+		"onlyBuiltDependencies": [
+			"@firebase/util",
+			"esbuild",
+			"protobufjs"
+		]
 	}
 }
