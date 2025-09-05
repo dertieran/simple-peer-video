@@ -5,7 +5,10 @@ import IconPlugin from 'unplugin-icons/vite';
 import { defineConfig } from 'vite';
 import SolidPlugin from 'vite-plugin-solid';
 
+import pkg from './package.json';
+
 export default defineConfig({
+	base: `/${pkg.name}/`,
 	plugins: [SolidPlugin(), UnocssPlugin(), IconPlugin({ compiler: 'solid' })],
 	resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
 });

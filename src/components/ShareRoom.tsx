@@ -19,7 +19,8 @@ import { Button } from './ui/button';
 type ShareRoomProps = { roomId: string };
 export function ShareRoom(props: ShareRoomProps) {
 	function link() {
-		const url = new URL(`#${encodeURIComponent(props.roomId)}`, location.origin);
+		const url = new URL(location.href);
+		url.hash = `#${encodeURIComponent(props.roomId)}`;
 		return url.href;
 	}
 
